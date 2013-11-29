@@ -1,3 +1,10 @@
+/**
+* ScriptInjector: Add external scripts to any page quickly and easily.
+*
+* Add this as a bookmark, so jQuery and underscore.js can be added to a page that doesn't already have them.
+*
+* This is mostly useful when I'm trying to scrape some data off a page I'm viewing, but I want to reorganize / reshape the data first.
+*/
 (function(){
 
 var scriptsToLoad = [
