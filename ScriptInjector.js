@@ -17,7 +17,7 @@ var scriptsToLoad = [
 	},
 	{
 		name: "jquery.js",
-		url: "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js”,
+		url: "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js",
 		test: function () {
 			return !! (window.$ && window.$.fn && window.$.fn.jquery);
 		}
