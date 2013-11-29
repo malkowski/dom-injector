@@ -21,6 +21,14 @@ var scriptsToLoad = [
 		test: function () {
 			return !! (window.$ && window.$.fn && window.$.fn.jquery);
 		}
+	},
+	{
+		// Note: Must be listed after jquery.js, so we don't try loading jquery UI first then redefining $ afterward.
+		name: "jquery-ui.js",
+		url: "//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js",
+		test: function () {
+			return !! (window.$ && window.$.fn && window.$.fn.jquery && window.$.widget);
+		}
 	}
 ];
 
