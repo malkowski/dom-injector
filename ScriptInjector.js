@@ -1,3 +1,5 @@
+javascript:(function(){
+
 /**
 * ScriptInjector: Add external scripts to any page quickly and easily.
 *
@@ -5,7 +7,6 @@
 *
 * This is mostly useful when I'm trying to scrape some data off a page I'm viewing, but I want to reorganize / reshape the data first.
 */
-(function(){
 
 var scriptsToLoad = [
 	{
@@ -41,15 +42,15 @@ for (var i = 0; i < scriptsToLoad.length; i++) {
 		window.console.debug(
 			"Script Injector: %s - %s",
 			s.name || s.url,
-			testFailed ? "test failed, not injecting into DOM" : "test passed, injecting into DOM"
+			testFailed ? "test failed, injecting into DOM" : "test passed, not injecting into DOM"
 		);
 	}
 
-	if (! testFailed) {
+	if (testFailed) {
 		var el = document.createElement('script');
 		el.src = scriptsToLoad[i].url;
 		document.children[0].appendChild(el);
 	}
 }
 
-})();
+}())
